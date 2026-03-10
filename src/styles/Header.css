@@ -1,0 +1,195 @@
+/* --- 1. Navbar แบบ Glassmorphism --- */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 25px 0;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+  box-sizing: border-box;
+  font-size: 25px;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 15px 10px;
+  }
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: #888;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  margin: 0 13px;
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
+  }
+}
+
+.nav-links a.active {
+  color: #00abf0;
+  /* สีฟ้าตามรูป */
+}
+
+.contact-btn {
+  background: transparent;
+  color: white;
+  border: 1px solid #fff;
+  padding: 8px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* --- 2. ส่วน Hero และแสงฟุ้ง (Glow) --- */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px 20px 60px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  position: relative;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding-top: 120px;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 10vw, 4.5rem);
+  color: #00abf0;
+  margin-bottom: 15px;
+  z-index: 2;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.hero h2 {
+  font-size: clamp(1.4rem, 5vw, 2.2rem);
+  margin-bottom: 25px;
+  z-index: 2;
+  color: #fff;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.hero p {
+  font-size: clamp(1rem, 3.5vw, 1.25rem);
+  color: #ccc;
+  line-height: 1.7;
+  max-width: 800px;
+  z-index: 2;
+  margin: 0 auto;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 20px;
+  margin-top: 35px;
+  z-index: 2;
+}
+
+.btn-talk,
+.btn-work {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-talk {
+  background: linear-gradient(135deg, #6e45e2 0%, #88d3ce 100%);
+  /* Placeholder gradient, will refine */
+  background: linear-gradient(90deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+}
+
+.btn-talk:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(236, 72, 153, 0.5);
+}
+
+.btn-work {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.btn-work:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 480px) {
+  .hero-btns {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .btn-talk,
+  .btn-work {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 0 10%;
+  }
+}
+
+/* ตัวสร้างแสงเบลอสีฟ้าด้านหลัง */
+.blur-glow {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 600px;
+  height: 250px;
+  background: rgba(0, 171, 240, 0.25);
+  /* สีฟ้าจางๆ */
+  filter: blur(100px);
+  /* ค่านี้ยิ่งเยอะ ยิ่งฟุ้งนวล */
+  z-index: 1;
+  pointer-events: none;
+  /* เพื่อไม่ให้ทับปุ่มหรือข้อความจนกดไม่ได้ */
+}

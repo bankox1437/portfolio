@@ -1,0 +1,27 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    width: 100%;
+    max-width: 100%;
+    /* Change to 100% to ensure it doesn't push out */
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    /* Prevent light glows from causing scroll */
+}
+
+@media (min-width: 768px) {
+    .content {
+        padding: 80px 40px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .content {
+        padding: 100px 60px;
+    }
+}

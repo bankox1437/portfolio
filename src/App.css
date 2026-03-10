@@ -1,0 +1,48 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+body {
+	min-height: 100vh;
+	background: linear-gradient(90deg, rgb(17 17 46) 0%, rgb(13 13 28) 43%, rgb(22 22 36) 100%);
+	background-attachment: fixed;
+	color: #e6eef8;
+}
+
+.App {
+	width: 100%;
+	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: #0d0d1c;
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 5px;
+	border: 2px solid #0d0d1c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #00abf0;
+	box-shadow: 0 0 10px rgba(0, 171, 240, 0.5);
+}
+
+/* For Firefox */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: rgba(255, 255, 255, 0.1) #0d0d1c;
+}
