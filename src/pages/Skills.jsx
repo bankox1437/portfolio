@@ -7,6 +7,7 @@ function Skills() {
         { name: 'HTML5', icon: 'html5' },
         { name: 'CSS3', icon: 'css3' },
         { name: 'React', icon: 'react' },
+        { name: 'Redux', icon: 'redux' },
         { name: 'NextJs', icon: 'nextjs' },
         { name: 'VueJs', icon: 'vuejs' },
         { name: 'Angular', icon: 'angularjs' },
@@ -16,6 +17,7 @@ function Skills() {
         { name: 'Tailwind CSS', icon: 'tailwindcss' },
         { name: 'NodeJs', icon: 'nodejs' },
         { name: 'Express', icon: 'express' },
+        { name: 'JWT', icon: 'jwt' },
         { name: 'PHP', icon: 'php' },
         { name: 'MySQL', icon: 'mysql' },
         { name: 'PostgreSQL', icon: 'postgresql' },
@@ -24,6 +26,8 @@ function Skills() {
         { name: 'Postman', icon: 'postman' },
         { name: 'Jira', icon: 'jira' },
         { name: 'Bitbucket', icon: 'bitbucket' },
+        { name: 'Docker', icon: 'docker' },
+        { name: 'Jenkins', icon: 'jenkins' },
 
     ];
   const [expanded, setExpanded] = useState(false);

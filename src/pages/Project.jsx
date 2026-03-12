@@ -15,7 +15,7 @@ function Project() {
         {
             name: 'Run Join life',
             description: 'Web Application that allows users to create running activities and join events organized by others. The system is built using React for the frontend, Node.js with Express for the backend, and PostgreSQL for the database.',
-            skills: ['react', 'nodejs','express', 'tailwindcss', 'postgresql','postman'],
+            skills: ['react','redux', 'nodejs','express','vite','jwt', 'tailwindcss', 'postgresql','postman'],
             github: 'https://github.com/bankox1437/activity_run',
             link: 'https://activity-run-alpha.vercel.app/',
         },
